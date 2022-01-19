@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { PopupComponent } from 'src/app/shared/components';
 import { Image } from '../../models';
 import { ImagesService } from '../../services/images.service';
 
@@ -10,8 +11,9 @@ import { ImagesService } from '../../services/images.service';
 export class ImageGalleryComponent implements OnInit {
 
   images: Image[];
-  imageInPopup: Image;
   readonly numberOfImages = 15;
+
+  @ViewChild('popup') popupRef: PopupComponent;
 
   constructor(private imagesService: ImagesService) { }
 
@@ -20,7 +22,7 @@ export class ImageGalleryComponent implements OnInit {
   }
 
   openImageDescription(image: Image) {
-    this.imageInPopup = image;
+    this.popupRef.openPopup(image);
   }
 
 }

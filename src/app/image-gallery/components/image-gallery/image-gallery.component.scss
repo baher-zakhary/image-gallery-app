@@ -7,15 +7,15 @@
     align-items: center;
 }
 
-.img-container {
+.grid-tile {
     display: flex;
+    flex-direction: column;
     margin: 5px;
     justify-content: center;
     align-items: center;
     flex: 1 0 20%;
 }
 
-.img {
-    // display: flex;
-    // flex: 1;
+.img-title {
+    margin-top: 5px;
 }

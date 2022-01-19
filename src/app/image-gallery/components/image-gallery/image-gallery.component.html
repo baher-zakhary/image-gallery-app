@@ -1,7 +1,12 @@
 <div class="flex-container">
-    <div class="img-container" *ngFor="let image of images">
-        <img class="img" [src]="image.url" [alt]="image.title" (click)="openImageDescription(image)">
+    <div class="grid-tile" *ngFor="let image of images">
+        <div class="img">
+            <img [src]="image.url" [alt]="image.title" (click)="openImageDescription(image)">
+        </div>
+        <div class="img-title">
+            {{image.title}}
+        </div>
     </div>
 </div>
 
-<app-popup></app-popup>
+<app-popup #popup></app-popup>

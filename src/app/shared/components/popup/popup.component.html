@@ -1,1 +1,12 @@
-<p>poup works!</p>
+<div class="overlay" [@hideShowOverlay]="isOpen ? 'overlayShown' : 'overlayHidden'">
+</div>
+<div [@openClose]="isOpen ? 'open' : 'closed'" class="popup-positioning popup-styling popup-flex-container">
+    <div class="content">
+        {{image?.description}}
+    </div>
+    <div class="footer">
+        <button (click)="closePopup()">
+            Close
+        </button>
+    </div>
+</div>
