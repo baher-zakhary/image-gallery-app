@@ -1,6 +1,6 @@
 <div class="flex-container">
     <div class="img-container" *ngFor="let image of images">
-        <img class="img" [src]="image.url" [alt]="image.description" (click)="openImageDescription(image)">
+        <img class="img" [src]="image.url" [alt]="image.title" (click)="openImageDescription(image)">
     </div>
 </div>
 
