@@ -1,1 +1,3 @@
-<p>image-gallery works!</p>
+<ng-container *ngFor="let image of images">
+    <img [src]="image.url" [alt]="image.description">
+</ng-container>
