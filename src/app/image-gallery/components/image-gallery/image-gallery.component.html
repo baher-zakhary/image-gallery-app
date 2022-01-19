@@ -1,3 +1,7 @@
-<ng-container *ngFor="let image of images">
-    <img [src]="image.url" [alt]="image.description">
-</ng-container>
+<div class="flex-container">
+    <div class="img-container" *ngFor="let image of images">
+        <img class="img" [src]="image.url" [alt]="image.description" (click)="openImageDescription(image)">
+    </div>
+</div>
+
+<app-popup></app-popup>

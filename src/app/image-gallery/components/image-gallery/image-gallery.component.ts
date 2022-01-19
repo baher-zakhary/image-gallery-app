@@ -10,12 +10,17 @@ import { ImagesService } from '../../services/images.service';
 export class ImageGalleryComponent implements OnInit {
 
   images: Image[];
+  imageInPopup: Image;
   readonly numberOfImages = 15;
 
   constructor(private imagesService: ImagesService) { }
 
   ngOnInit(): void {
     this.images = this.imagesService.getImages(this.numberOfImages);
+  }
+
+  openImageDescription(image: Image) {
+    this.imageInPopup = image;
   }
 
 }

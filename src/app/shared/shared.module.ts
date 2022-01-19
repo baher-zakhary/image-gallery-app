@@ -13,6 +13,9 @@ import { RouterModule } from '@angular/router';
   imports: [
     RouterModule,
     CommonModule
+  ],
+  exports: [
+    PopupComponent
   ]
 })
 export class SharedModule { }
