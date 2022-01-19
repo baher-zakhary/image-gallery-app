@@ -10,9 +10,9 @@ describe('ImageGalleryComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ ImageGalleryComponent ],
-      providers: [
-          {provide: 'Window', useValue: viewport.context.contentWindow},
-      ]
+      // providers: [
+      //     {provide: 'Window', useValue: viewport.context.contentWindow},
+      // ]
     })
     .compileComponents();
   });
@@ -30,7 +30,7 @@ describe('ImageGalleryComponent', () => {
   it('it should open popup and disble scroll', () => {
     const image = new Image(0);
     component.openImageDescription(image);
-    fixture.debugElement.query(By.directive())
+    // fixture.debugElement.query(By.directive())
     const noScrollFound = document.body.classList.contains('no-scroll');
     expect(noScrollFound).not.toBeNull();
   });
