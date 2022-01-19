@@ -1,6 +1,9 @@
 <div class="overlay" [@hideShowOverlay]="isOpen ? 'overlayShown' : 'overlayHidden'">
 </div>
 <div [@openClose]="isOpen ? 'open' : 'closed'" class="popup-positioning popup-styling popup-flex-container">
+    <div>
+        <h3>{{image?.title}}</h3>
+    </div>
     <div class="content">
         {{image?.description}}
     </div>
